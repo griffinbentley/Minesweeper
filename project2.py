@@ -179,12 +179,12 @@ class Minesweeper:
                 type = input("“select” or “flag” or “unflag”? ")
             x = input("Select an x coordinate: ")
             # Checks to make sure 'x' is valid
-            while not x.isdigit() or int(x) == 0:
+            while not x.isdigit() or int(x) <= 0 or int(x) > self._length:
                 print("Invalid Input")
                 x = input("Select an x coordinate: ")
             y = input("Select a y coordinate: ")
             # Checks to make sure 'y' is valid
-            while not y.isdigit() or int(y) == 0:
+            while not y.isdigit() or int(y) <= 0 or int(y) > self._height:
                 print("Invalid Input")
                 y = input("Select a y coordinate: ")
             # Converts x and y into integers
